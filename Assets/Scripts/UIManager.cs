@@ -11,7 +11,7 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] GameObject panelStartGameUI;
     [SerializeField] GameObject panelGameOverUI;
-    // [SerializeField] GameObject panelCompletedUI;
+    [SerializeField] GameObject panelCompletedUI;
 
     [SerializeField] Text textCountEnemy;
     [SerializeField] Text textCountCrystal;
@@ -29,7 +29,7 @@ public class UIManager : MonoBehaviour
         CountEnemyUI(0);
         panelStartGameUI.SetActive(true);
         panelGameOverUI.SetActive(false);
-        //panelCompletedUI.SetActive(false);
+        panelCompletedUI.SetActive(false);
     }
     public void PlayGameUI()
     {
@@ -45,7 +45,7 @@ public class UIManager : MonoBehaviour
     }
     public void GameCompletedUI()
     {
-
+        panelCompletedUI.SetActive(true);
     }
 
     public void CountEnemyUI(int value)

@@ -72,28 +72,32 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-       
-            if (other.gameObject.tag == ("VioletCheck"))
-            {
-                ColorCheck(playerManager.matVioletIndex);
-            }
-            else if (other.gameObject.tag == ("BlueCheck"))
-            {
-                ColorCheck(playerManager.matBlueIndex);
-            }
-            else if (other.gameObject.tag == ("YellowCheck"))
-            {
-                ColorCheck(playerManager.matYellowIndex);
-            }
-            else if (other.gameObject.tag == ("TurquoiseCheck"))
-            {
-                ColorCheck(playerManager.matTurquoiseIndex);
-            }
-            else if (other.gameObject.tag == ("GreenCheck"))
-            {
-                ColorCheck(playerManager.matGreenIndex);
-            }
-        
+
+        if (other.gameObject.tag == ("VioletCheck"))
+        {
+            ColorCheck(playerManager.matVioletIndex);
+        }
+        else if (other.gameObject.tag == ("BlueCheck"))
+        {
+            ColorCheck(playerManager.matBlueIndex);
+        }
+        else if (other.gameObject.tag == ("YellowCheck"))
+        {
+            ColorCheck(playerManager.matYellowIndex);
+        }
+        else if (other.gameObject.tag == ("TurquoiseCheck"))
+        {
+            ColorCheck(playerManager.matTurquoiseIndex);
+        }
+        else if (other.gameObject.tag == ("GreenCheck"))
+        {
+            ColorCheck(playerManager.matGreenIndex);
+        }
+        else if (other.gameObject.tag == ("FinishLine"))
+        {
+            playerManager.FinishLevel();
+        }
+
     }
 
 }

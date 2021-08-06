@@ -105,10 +105,11 @@ public class PlayerManager : MonoBehaviour
         countQueue = 0;
         countCrystal = 0;
     }
-    public void FinishLevel() 
+    public void FinishLevel()
     {
         levelState = LevelState.Finished;
         playerState = PlayerState.Stop;
+        uiManager.GameCompletedUI();
     }
     public void GameOver()
     {
