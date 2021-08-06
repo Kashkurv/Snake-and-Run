@@ -102,6 +102,7 @@ public class PlayerManager : MonoBehaviour
         playerState = PlayerState.Fever;
         yield return new WaitForSeconds(5);
         playerState = PlayerState.Move;
+        uiManager.CountCrystalUI(countCrystal);
         countQueue = 0;
         countCrystal = 0;
     }
