@@ -30,7 +30,6 @@ public class Crystal : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-
         if (other.gameObject.tag == ("BoxHit"))
         {
             isHit = true;

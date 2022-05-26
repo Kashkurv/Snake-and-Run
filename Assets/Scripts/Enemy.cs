@@ -33,18 +33,17 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
-            if (other.gameObject.tag == ("BoxHit"))
-            {
-                isHit = true;
-            }
-            if (other.gameObject.tag == ("HitDestroy"))
-            {
-                playerManager.CountDedEnemy(ID);
-                audioManager.PlaySound("EnemyHit");
-                playerManager.CheckQueue("Enemy");
-                Destroy(gameObject);
-            }       
+        if (other.gameObject.tag == ("BoxHit"))
+        {
+            isHit = true;
+        }
+        if (other.gameObject.tag == ("HitDestroy"))
+        {
+            playerManager.CountDedEnemy(ID);
+            audioManager.PlaySound("EnemyHit");
+            playerManager.CheckQueue("Enemy");
+            Destroy(gameObject);
+        }
     }
     private void OnTriggerExit(Collider other)
     {
